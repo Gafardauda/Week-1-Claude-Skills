@@ -5,8 +5,14 @@ Code challenge for Week 1 of the Techfleet AI development residency.
 This project is a set of **Claude Code "checker" skills** — small, reusable
 instruction files that make Claude review work against current best practices
 and report what needs fixing. Each skill *checks* things (code, data, UI); none
-of them build things. The skills load automatically whenever Claude Code runs
-inside this repository.
+of them build things.
+
+> ### ▶ How to load the skills
+> The skills live in `.claude/skills/` at the top of **this `Week 1` folder**.
+> Claude Code auto-loads skills from the top of whatever folder you open as the
+> project, so **open the `Week 1` folder itself in Claude Code** (not the repo
+> root). All four skills then load automatically — no extra setup. You can also
+> invoke one by name, e.g. `/security-audit`.
 
 ## The skills
 
