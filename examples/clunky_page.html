@@ -1,0 +1,33 @@
+<!doctype html>
+<!--
+  examples/clunky_page.html
+  A deliberately POOR web page used to test the ux-review skill.
+  It contains intentional UX and accessibility problems. Do not reuse it.
+-->
+<html>
+<head>
+  <title>Sign Up</title>
+  <style>
+    body { width: 1000px; font-family: Arial; }     /* fixed width: not mobile friendly */
+    .hint { color: #cccccc; }                        /* very low contrast on white */
+    .btn { background: #2d6; padding: 4px; }          /* tiny tap target, no focus style */
+  </style>
+</head>
+<body>
+  <div style="font-size:26px;">Join Us</div>          <!-- not a real heading -->
+
+  <img src="hero.png">                                <!-- no alt text -->
+
+  <p class="hint">Fields in red are required.</p>     <!-- info by color alone -->
+
+  <form>
+    <input type="text" placeholder="Name"><br>        <!-- placeholder used instead of a label -->
+    <input type="text" placeholder="Email"><br>       <!-- no label; no validation message area -->
+    <input type="password" placeholder="Password"><br>
+
+    <div class="btn" onclick="submitForm()">➡</div>   <!-- clickable div, icon only, no text, no keyboard support -->
+  </form>
+
+  <p>Having trouble? <a href="/help">click here</a></p> <!-- vague link text -->
+</body>
+</html>

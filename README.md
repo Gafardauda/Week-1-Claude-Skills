@@ -33,7 +33,10 @@ Week-1-Claude-Skills/
 │       └── test-quality-review/SKILL.md
 └── examples/                          # Deliberately flawed files for testing the skills
     ├── vulnerable_sample.py           # Insecure Python (for security-audit)
-    └── messy_customers.csv            # Messy dataset (for exploratory-data-analysis)
+    ├── messy_customers.csv            # Messy dataset (for exploratory-data-analysis)
+    ├── clunky_page.html               # Poor web page (for ux-review)
+    ├── stats.py                       # Low-quality code (for test-quality-review)
+    └── test_stats.py                  # Thin test with missing cases (for test-quality-review)
 ```
 
 ## How each skill works
@@ -62,13 +65,16 @@ values, and inconsistent formatting):
 
 > "Check the quality of examples/messy_customers.csv before I analyze it"
 
-**UX — `ux-review`** (bring your own HTML, or point it at a page/component):
+**UX — `examples/clunky_page.html`** (has an icon-only button, missing labels,
+low contrast, no alt text, and a fixed non-mobile width):
 
-> "Review index.html for user experience and accessibility issues"
+> "Review examples/clunky_page.html for user experience and accessibility issues"
 
-**Testing & quality — `test-quality-review`** (point it at code and its tests):
+**Testing & quality — `examples/stats.py` and `examples/test_stats.py`** (the
+test only covers the happy path; the code crashes on an empty list and repeats
+itself):
 
-> "Review these tests for coverage and the code for quality"
+> "Review examples/test_stats.py for coverage and examples/stats.py for quality"
 
 Each run produces a findings report, ranked by importance, with concrete fixes.
 
