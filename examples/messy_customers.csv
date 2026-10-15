@@ -1,0 +1,7 @@
+id,name,city,signup_date,amount
+1,John Smith,New York,2024-01-05,1200
+2,Jane Doe,new york,05/02/2024,"$1,300"
+3,Bob Lee,,2024-03-10,900
+2,Jane Doe,new york,05/02/2024,"$1,300"
+4,  Alice  ,NY,2024/04/01,1500
+5,Tom,Chicago,,
